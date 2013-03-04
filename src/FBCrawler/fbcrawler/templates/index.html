@@ -1,0 +1,34 @@
+<html>
+    <head>
+	  <title>Facebook Crawler App.</title>
+	  <script type= "text/javascript" src="/static/jquery-1.6.2.min.js"></script>
+	  <script type= "text/javascript" src="/static/index.js"></script>
+	  
+	  <link rel="stylesheet" type="text/css" media="screen" href="/static/index.css" />
+	</head>
+	<body>
+	    <div class="container" align="center">
+			<h3 align="left"> Welcome in Facebook Crawler App. </h3>
+			<div align="left" class="form">
+			    {% if message != "" %}
+					<div id="msg" style= "width:40%; border-bottom: 2px solid #FFE9E9;" class="message" align="left">
+						{{ message }}
+					</div>
+				{% endif %}
+				<br />
+				<a href="/renewAccessToken"> Renew Facebook Session</a>
+			</div>
+			
+			<div class="form" align="left">
+			  <form>
+				<label for="new_pages"> New Pages:[comma separated] </label>
+				<br/>
+				<textarea class="text" id="new_pages" cols="70" rows="3" placeholder="page1, page2, ... , pageN"></textarea>
+				<input type="button" class="button" valign="bottom" value="Add New Pages" onclick="tag();" />
+			  </form>
+			  <div id="result" class="message" align="left">
+			  </div>
+			</div>
+		</div>
+	</body>
+</html>
